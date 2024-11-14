@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="en" mode="dark">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>100x Brokerage | Home Page </title>
+<link rel="icon" href="https://lokn.site/assets/img/favicon-icon.png">
+<meta name="description" content="Open up a world of possibilities with  100x brokerage">
+<meta name="keywords" content="Investments, 100x, brokerage, trade">
+<meta name="csrf-token" content="9u65laqskxZbWF7NjZfVe4s3opqWIzaVksm7KoSv">
+
+
+
+<!-- style added here ================ -->
+
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/mystyles.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<!-- font added here (ital + Merriweather) ================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+<!-- font-awesome added here ================ -->
+<link rel="stylesheet" href="https://lokn.site/assets/font-awesome-6.6.6-web/css/all.min.css">
+
+
+
+
+<script>
+    var apiUrlCrypto = "https://lokn.site/crypto.json";
+    var apiUrlForex = "https://lokn.site/forex.json";
+    var apiUrlIndices = "https://lokn.site/indices.json";
+    var apiUrlStocks = "https://lokn.site/stocks.json";
+    var apiUrlFutures = "https://lokn.site/futures.json";
+    var apiUrletfs = "https://lokn.site/etfs.json";
+
+
+
+    const countries = [
+        "Luxembourg",
+        "Switzerland",
+        "Ireland",
+        "Norway",
+        "Qatar",
+        "Iceland",
+        "United States",
+        "Denmark",
+        "Singapore",
+        "Australia",
+        "Sweden",
+        "Netherlands",
+        "Austria",
+        "Finland",
+        "Germany",
+        "Canada",
+        "Belgium",
+        "United Arab Emirates",
+        "New Zealand",
+        "Japan"
+    ];
+</script>
+
+<!-- jQuery added here ================ -->
+<script src="https://lokn.site/assets/jQuery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="marquee">
+            <ul class="marquee-content list-style-none" id="site-main-nav">
+                <li > 
+                    <div class="price-card d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center g-10">
+                            <div class="country-name d-flex align-items-center g-8">
+                                <img src="https://lokn.site/assets/img/country-eur.png" alt="country flag" class="flag">
+                                <span>eurusd</span>
+                            </div>
+                            <div class="price">481.3</div>
+                        </div>
+                        <div class="percentage-area d-flex align-items-center g-8">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span class="percentage">3.68%</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="main-header">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center g-10">
+                <a href="" class="logo-area d-flex align-items-center g-4">
+                    <img src="./images/logo.png" alt="Site Logo" class="site-logo">
+                </a>
+                <a id="btn-nav-toggle" class="btn-nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <div class="header-btns d-flex flex-wrap g-8">
+                    <a class="btn btn-login" href="">Log in</a>
+                    <a class="btn btn-started" href="">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-area">
+            <div class="container d-flex flex-wrap justify-content-between align-items-center g-10">
+                <nav class="nav nav-main">
+                    <dl class="d-flex flex-wrap g-20">
+                        <dt><a href="" class="active">Home</a></dt>
+                        <dt><a href="" class="">About Us</a></dt>
+                        <dt><a href="" class="">Account Plans</a></dt>
+                        <dt><a href=""  class="">FAQs</a></dt>
+                        <dt class="dropdown">
+                            <a> <span>Legal Documentation</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                                                    <dl class="dropdown-menu d-flex flex-column r-g-15">
+                                                                                                    <dt class="dropdown-item">
+                                            <a href="javascript:void(0)" 
+                                                >
+                                                Sec regulations
+                                            </a>
+                                        </dt>
+                                                                        <dt class="dropdown-item">
+                                            <a href="javascript:void(0)" 
+                                                >
+                                                Security Investors protections
+                                            </a>
+                                        </dt>
+                                                                        <dt class="dropdown-item">
+                                            <a href="javascript:void(0)" 
+                                                >
+                                                Corporation SIPC
+                                            </a>
+                                        </dt>
+                                                                                        </dl>
+                        </dt>
+                        <dt class="header-btns g-8">
+                            <a class="btn btn-login" href="">Log in</a>
+                            <a class="btn btn-started" href="">Get Started</a>
+                        </dt>
+                    </dl>
+                </nav>
+                <div class="contact-details d-flex g-20">
+                    <p>Opening Hours Mon - Fri: 8AM to 6PM</p>
+                    <a target="_blank" href="tel:+1(111)111-1111">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>+1(111)111-1111</span>
+                    </a>
+                    <a target="_blank" href="mailto:demo@demo.com">                    
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="circle-shadow-area">
+        </div>
+    </header>        
+    <main>
+        <section class="hero-section-3">
+            <div class="container hero-wrap">
+               <div class="hero-inner d-flex flex-row justify-content-between align-items-center">
+                    <div class="hero-inner-left d-flex flex-column justify-content-center">
+                        <img alt="hero-img" src="./images//hero-img2.png"/>
+                        <h2>The Multi Hybrid Trading System</h2>
+                        <p>Simplify your investing journey with XXX. Our intuitive platform offers a wide range of investment options, insightful tools, and expert support to help you succeed.</p>
+                        <a class="btn btn-started" >Get Started</a>
+                    </div>
+                    <div class="hero-inner-right">
+                        <img alt="hero-img" src="./images/hero-img.png"/>
+                    </div>
+               </div>
+            </div>
+          
+            <div class="trade-counter w-100">
+                <div class="container d-grid">
+                    <div class="item">
+                        <span  value="300">300+</span>
+                        <span class="text d-inline-block">CFDS to Trade</span>
+                    </div>
+                    <div class="item">
+                        <span value="500" startWith="1:">1:500</span>
+                        <span class="text d-inline-block">Leverage Up To</span>
+                    </div>
+                    <div class="item">
+                        <span value="1000" startWith="$">$1000</span>
+                        <span class="text d-inline-block">minimum deposit</span>
+                    </div>
+                    <div class="item">
+                        <span value="0" startWith="$">$0</span>
+                        <span class="text d-inline-block">Deposit fees</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trusted-awards-section d-flex align-items-center">
+            <div class="trusted-awards container">
+                <div class="award-item">
+                <img alt="award" src="./images/award.png"/>
+                <p class="award-sub">Best CFD Broker</p>
+                <p class="award-par">TradeON Summit 2023</p>
+                </div>
+                <div class="award-item">
+                <img alt="award" src="./images/award.png"/>
+                <p class="award-sub">Best Execution Broker</p>
+                <p class="award-par">Forex EXPO Dubai 2021</p>
+                </div>
+                <div class="award-item">
+                <img alt="award" src="./images/award.png"/>
+                <p class="award-sub">Best Trading Platform</p>
+                <p class="award-par">London Summit 2019</p>
+                </div>
+                <div class="award-item">
+                <img alt="award" src="./images/award.png"/>
+                <p class="award-sub">Best Broker Asia</p>
+                <p class="award-par">iFX EXPO 2015</p>
+                </div>
+            </div>
+        </section>
+        <section class="trusted">
+            <div class="trusted-inner container">
+                <div class="trusted-textBox">
+                    <a href="" class="btn-regulated">Fully Regulated</a>
+                  <h2 class="trusted-title">Trusted For Over <span>25+ Years</span> </h2>
+                  <p class="trusted-text">when placing your money with a broker, you need to make sure your broker is secure and can endure through good and bad times. Our strong capital position, conservative balance sheet and automated risk controls are designed to protect 100x Brokerage and our clients from trading losses.</p>
+             
+                  <div class="trade-counter  trusted-innerBox">
+                    
+                        <div class="item trusted-item">
+                            <span class="trusted-sub" endWith="%" value="79.4"> 79.4%</span>
+                            <span class="trusted-par" >Privately Held</span>
+                        </div>
+                        <div class="item trusted-item">
+                            <span class="trusted-sub" startWith="$" endWith="B" value="8.7" >$8.7B</span>
+                            <span class="trusted-par" >Equity Capital </span>
+                        </div>
+                        <div class="item trusted-item">
+                            <span class="trusted-sub" value="3.45" startWith="$" endWith="M">3.45M</span>
+                            <span class="trusted-par" >Daily Average Revenue Trades</span>
+                        </div>
+                        <div class="item trusted-item">
+                            <span class="trusted-sub" value="5.8" endWith="B" startWith="$">$5.8B</span>
+                            <span class="trusted-par" >Excess Regulatory Capital</span>
+                        </div>
+                 
+                </div>
+                </div>
+                <div class="trusted-imgBox">
+                  <img alt="trusted" src="./images/trusted-img.png"/>
+                </div>
+              
+            </div>
+        </section>
+        <section class="tools">
+            <div class="tools-inner container d-flex justify-content-between">
+                <div class="tools-item d-flex flex-row">
+                    <div class="tools-num">01.</div>
+                    <div class="tools-box">
+                        <h4>Advanced Charting Tools</h4>
+                        <p>Our platform offers a suite of advanced charting tools to help you analyze market trends, identify patterns, and make informed trading decisions. Customize charts with various technical indicators and drawing tools.</p>
+                    </div>
+                </div>
+                <div class="tools-item d-flex flex-row">
+                    <div class="tools-num">02.</div>
+                    <div class="tools-box">
+                        <h4>Risk Management Tools</h4>
+                        <p>Protect your investments with our robust risk management tools. Set stop-loss and take-profit orders to limit potential losses and secure profits. Additionally, use position sizing techniques to manage your risk exposure.</p>
+                    </div>
+                </div>
+                <div class="tools-item d-flex flex-row">
+                    <div class="tools-num">03.</div>
+                    <div class="tools-box">
+                        <h4>Economic Calendar</h4>
+                        <p>Stay informed about upcoming economic events and their potential impact on the markets. Our economic calendar provides a detailed overview of key economic releases, including interest rate decisions, GDP reports, and employment data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="spreads">
+            <div class="spread-inner container">
+              <div class="spread-imgBox">
+                  <img alt="spread" src="./images/spreads-img.png"/>
+              </div>
+              <div class="spread-textBox">
+                <a href="" class="btn-regulated">ABOUT US</a>
+                <h2>Financial Guidance for Every Stage of Life.</h2>
+                <p class="spreads-text">Your financial future deserves a strong foundation. With a robust capital base and advanced risk management strategies, XXX is built to withstand market volatility. Our commitment to your financial security is unwavering. We're more than just a broker; we're your partner in financial success.</p>
+                <ul>
+                  <li>
+                    <img alt="tick" src="./images//tick.png"/>
+                    <p>Low commissions starting as low as $10 with no added spreads, ticket charges, platform fees or account minumum</p>
+                  </li>
+                  <li>
+                    <img alt="tick" src="./images//tick.png"/>
+                    <p>Financing rates up to 50%  lower than the industry</p>
+                  </li>
+                  <li>
+                    <img alt="tick" src="./images//tick.png"/>
+                    <p>Earn extra income on your lendable shares</p>
+                  </li>
+                  <li>
+                    <img alt="tick" src="./images//tick.png"/>
+                    <p>Trading Bots to automate trading for both beginners and experts</p>
+                  </li>
+                </ul>
+                <button class="btn">Get Started</button>
+              </div>
+            </div>
+          </section>
+          <section class="choose">
+            <div class="markets container">
+                <h3>17,000 markets. Countless opportunities</h3>
+                <p>Trade CFDs with us to take advantage of both rising and falling prices.</p>
+                <div class="markets-inner d-flex flex-row justify-content-center ">
+                    <div class="markets-item d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img alt="market" src="./images/token_forex.png"/>
+                        </div>
+                        <p>Forex</p>
+                    </div>
+                    <div class="markets-item d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img alt="market" src="./images/solar_graph-new-up-bold.png"/>
+                        </div>
+                        <p>Indices</p>
+                    </div>
+                    <div class="markets-item d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img alt="market" src="./images/bitcoin.png"/>
+                        </div>
+                        <p>Cryptocurrency</p>
+                    </div>
+                    <div class="markets-item d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img alt="market" src="./images/uis_chart.png"/>
+                        </div>
+                        <p>Shares</p>
+                    </div>
+                    <div class="markets-item d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img alt="market" src="./images/material-symbols_oil-barrel.png"/>
+                        </div>
+                        <p>Commodities</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="choose-inner container">
+                <div class="choose-left">
+                  <img alt="choose" src="./images/choose-img1.png"/>
+                  <div class="d-flex flex-row">
+                    <img alt="choose" src="./images/choose-img2.png"/>
+                    <img alt="choose" src="./images/choose-img3.png"/>
+                  </div>
+                </div>
+                <div class="choose-right">
+                    <a href="" class="btn-regulated">WHY US</a>
+                    <h2>Why Choose Us</h2>
+                    <p class="choose-right-par">Explore a diverse range of investment options, gain valuable insights, and watch your portfolio grow. Join the XXX today.</p>
+                    <div class="choose-right-box">
+                        <div class="choose-item">
+                            <div class="choose-item-inner">
+                              <img alt="net" src="./images/token_forex.png"/>
+                            </div>
+                            <div class="choose-item-textBox">
+                                <p class="choose-sub">Real Time Data</p>
+                                <p class="choose-par">Access up-to-the-second market data, including stock prices, forex rates, and cryptocurrency values. Stay informed and make timely investment decisions.</p>
+                            </div> 
+                          </div>
+                          <div class="choose-item">
+                            <div  class="choose-item-inner">
+                              <img alt="net" src="./images/token_forex.png"/>
+                            </div>
+                            <div class="choose-item-textBox">
+                                <p class="choose-sub">Trading Bot Technology</p>
+                                <p class="choose-par">Automate your trading strategies with our advanced trading bot technology. Execute trades with precision and efficiency, even when you're not actively monitoring the markets.</p>
+                            </div>
+                          </div>
+                          <div class="choose-item">
+                            <div  class="choose-item-inner">
+                              <img alt="net" src="./images/token_forex.png"/>
+                            </div>
+                            <div class="choose-item-textBox">
+                                <p class="choose-sub">Portfolio Management Tools</p>
+                                <p class="choose-par">Track, analyze, and optimize your investment portfolio. Make data-driven decisions to achieve your financial goals.</p>
+                            </div>
+                          </div>
+                          <div class="choose-item">
+                            <div  class="choose-item-inner">
+                              <img alt="net" src="./images/token_forex.png"/>
+                            </div>
+                            <div class="choose-item-textBox">
+                                <p class="choose-sub">24/7 Customer Service</p>
+                                <p class="choose-par">Receive expert assistance from our dedicated support team, available 24/7. Get timely solutions to your questions and concerns.</p>
+                            </div>
+                          </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <section class="spreads second-spread-inner">
+                <div class="spread-inner  container">
+                  <div class="spread-imgBox second-spread">
+                      <img alt="spread" src="./images//spread.png"/>
+                  </div>
+                  <div class="spread-textBox second-spread-box">
+                    <h2>Tight spreads and ultra-fast execution</h2>
+                    <p class="spreads-text">Best market prices available so you can receive excellent conditions.</p>
+                    <ul>
+                      <li>
+                        <img alt="tick" src="./images//tick.png"/>
+                        <p>Low commissions starting as low as $10 with no added spreads, ticket charges, platform fees or account minumum</p>
+                      </li>
+                      <li>
+                        <img alt="tick" src="./images//tick.png"/>
+                        <p>Financing rates up to 50%  lower than the industry</p>
+                      </li>
+                      <li>
+                        <img alt="tick" src="./images//tick.png"/>
+                        <p>Earn extra income on your lendable shares</p>
+                      </li>
+                      <li>
+                        <img alt="t
+        
+        oygul, [12 Nov 2024 at 16:56:17]:
+        ick" src="./images//tick.png"/>
+                        <p>Negative balance protection</p>
+                      </li>
+                    </ul>
+                    <button class="btn second-spread-btn">Start Trading Today</button>
+                  </div>
+                </div>
+              </section>
+           
+          </section>
+    <section class="accaount">
+        <div class="container">
+            <h2>Choose The Best Account For You</h2>
+            <p>Tailor Your Trading Experience. Choose the account that best suits your investment goals and risk tolerance.</p>
+            <ul>
+                <li>
+                <button class="accaount-basic">Basic</button>
+                <h4>$250</h4>
+                <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Up to 25% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily news</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Trading Academy</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Weekly market review</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Account manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Weekly portfolio progress report</p>
+                    </div>
+                </div>
+                <button class="accaount-open">Open Account</button>
+                </li>
+                <li>
+                    <button class="accaount-basic">Silver</button>
+                    <h4>$1000</h4>
+                    <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Up to 35% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily market review</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily portfolio progress report</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Work with a portfolio manager/p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Monthly session with certified accountant</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> 24/7 account monitoring by top analyst group</p>
+                    </div>
+                    </div>
+                    <button class="accaount-open">Open Account</button>
+                </li>
+                <li>
+                    <button class="accaount-basic">Gold</button>
+                    <h4>$5000</h4>
+                    <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Up to 25% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily news</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Trading Academy</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Weekly market review</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Account manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Weekly portfolio progress report</p>
+                    </div>
+                    </div>
+                    <button class="accaount-open">Open Account</button>
+                </li>
+                <li>
+                    <button class="accaount-basic">VIP</button>
+                    <h4>$100,000</h4>
+                    <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Up to 75% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily market review</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily portfolio progress report</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Personal portfolio manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Weekly live stream trading webinar</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Customized Educationt</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily market signals</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> In-Depth Research</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Invites to VIP events</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Managed Portfolio</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> VIP Advisor</p>
+                    </div>
+                    </div>
+                    <button class="accaount-open">Open Account</button>
+                </li>
+                <li>
+                    <button class="accaount-basic">Pro</button>
+                    <h4>$500,000</h4>
+                    <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Up to 100% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily market review & signals</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Unlimited access to brokers</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Personal chief portfolio manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Customized Education</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily one on one live stream trading webinar with top analyst</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Wealth Manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Invites to VIP events</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Managed Portfolio</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Higher Payouts</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Super tight spreads</p>
+                    </div>
+                    </div>
+                    <button class="accaount-open">Open Account</button>
+                </li>
+                <li>
+                    <button class="accaount-basic">Pro VIP</button>
+                    <h4>$1,000,000</h4>
+                    <div class="tickLists">
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Up to 100% margin loan</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily market review & signals</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Unlimited access to brokersr</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Personal chief portfolio manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Customized Education</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Daily one on one live stream trading webinar with top analyst</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Wealth Manager</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Invites to VIP events</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Managed Portfolio</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p> Higher Payouts</p>
+                    </div>
+                    <div class="tickItem">
+                        <img alt="tick" src="./images/tick.png"/>
+                        <p>Super tight spreads</p>
+                    </div>
+                    </div>
+                    <button class="accaount-open">Open Account</button>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center"> <button class=" see-more">See More <span> <i class="fa-solid fa-chevron-down"></i></span> </button></div>
+        </div>
+    
+    </section>
+    <section class="faq-section">
+        <div class="container">
+            <h1 class="section-title text-center">
+                Frequent Asked Questions 
+            </h1>
+
+            <div class="card-collapsible-group">
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>How does  100x brokerage work?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body">
+                        100x brokerage simplifies your entry into the financial markets by providing a platform
+                        where you can trade a variety
+                        of assets, including stocks, cryptocurrencies, and forex. We offer tools that help you make
+                        informed decisions, whether
+                        you're just starting or have been trading for years.
+                    </div>
+                </div>
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>What if I am a beginner in trading?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body">
+                        No problem!  100x brokerage is beginner-friendly. We have tons of helpful tutorials and
+                        articles to get you started.
+                    </div>
+                </div>
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>What is the minimum deposit amount?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body">
+                        You can start trading with a minimum deposit of $1000. This is to ensure you have enough
+                        capital to make meaningful
+                        trades and take full advantage of our platform’s features.
+                    </div>
+                </div>
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>Can I start trading with just $250?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body">No. Our minimum deposit is $1000 so as to allow you explore different
+                        markets and strategies on our platform without
+                        committing too much capital.</div>
+                </div>
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>What trading tools are available on  100x brokerage?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body"> 100x brokerage provides a wide range of tools to enhance your trading
+                        experience, including advanced charting
+                        software, real-time market data, technical indicators, and customizable alerts. These tools
+                        are designed to help you
+                        make informed decisions and maximize your trading potential.</div>
+                </div>
+                <div class="card mx-auto">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>What account plans does  100x brokerage offer?</span>
+                        <a class="btn-collapse"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <div class="card-body">We offer several account plans tailored to different trading needs and
+                        experience levels. Whether you’re a beginner,
+                        intermediate, or advanced trader, there’s an account plan for you. Each plan includes
+                        varying levels of access to
+                        trading tools, educational resources, and customer support, so you can choose the one that
+                        best suits your goals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+
+<footer>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-start r-g-10">
+            <div class="logo-area d-flex align-items-center g-4">
+                <img src="./images//logo.png" alt="Site Logo" class="site-logo">
+                <p>The reliable way to trade.</p>
+            </div>
+            <div class="subscribe-area">
+                <p class="text">Subscribe To Our Newsletter</p>
+                <div class="input-area d-flex g-8">
+                    <div class="input-group">
+                        <input class="form-control" type="email" name="email" id="subscribeEmail"
+                            placeholder="Enter email address">
+                    </div>
+                    <a href="" class="btn btn-subscribe">Subscribe</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav d-flex flex-wrap justify-content-between r-g-15">
+            <dl>
+                <dt><a href="">Company</a></dt>
+                <dt><a href="">Who We are</a></dt>
+                <dt><a href="">Frequently Asked Questions (FAQ)</a></dt>
+                <dt><a href="">Account Plans</a></dt>
+                <dt><a href="">Legal Documentations</a></dt>
+            </dl>
+            <dl>
+                <dt><a href="">MARKETS</a></dt>
+                <dt><a href="">Forex</a></dt>   
+                <dt><a href="">Share CFDs</a></dt> 
+                <dt><a href="">Indices</a></dt> 
+                <dt><a href="">Commodities</a></dt>     
+                <dt><a href="">Crypto Currency</a></dt>       </dl>
+            <dl>
+                <dt class="text-end"><a href="">Get started</a></dt>
+                <dt class="text-end"><a href="">Create An Account</a></dt>
+                <dt class="text-end"><a href="">Log In</a></dt>
+            </dl>
+        </div>
+        <div class="footer-bottom-text">
+            <div></div>
+            <p class="footer-text text-center">© 2024 100x Brokerage. All Rights Reserved.</p>
+            <div></div>
+        </div>
+       
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <h3>RISK WARNING:</h3>
+            <p>Trading derivatives and leveraged products carries a high risk, including the potential to lose more than your initial investment. Such trading may not be suitable for everyone. Before making any financial decisions, </p>
+            <p>Please review our Product Disclosure Statement (PDS), Risk Disclosure Notice, and Financial Services Guide (FSG) on our website, and seek independent financial advice if necessary.</p>
+            <p>CFDs and financial spread trading are complex instruments that involve leverage, which can lead to rapid losses. Currently, 83.5% of retail investor accounts lose money trading CFDs with this provider. Before engaging in spread trading, carefully consider if you fully understand these instruments and are prepared to accept the high risk of loss. Note that CFDs do not grant ownership or interest in the underlying asset.</p>
+            <p>Please be aware that the content on this website is for informational purposes only and is not tailored to your individual financial objectives, situation, or needs. Consider this information in light of your personal circumstances.</p>
+            <p>investment. Past performance does not guarantee future outcomes.</p>
+            <p>.This website is operated by IG USA Inc., located at Level 20, Madison & Fifth, 1234 Fifth Avenue, New York, NY 10010. EIN 12-3456789, U.S. Financial Services License No. 876543. Derivatives Issuer License in Canada Reg. No. 123456, CANBN 123456789. 
+
+            </p>
+            <p>Please ensure you fully understand the risks and manage your exposure responsibly.</p>
+        </div>
+    </div>
+</footer>
+
+        <script src="https://lokn.site/assets/font-awesome-6.6.6-web/js/all.min.js"></script>
+
+
+<!-- script added here ======================= -->
+
+<script src="./js/common.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
